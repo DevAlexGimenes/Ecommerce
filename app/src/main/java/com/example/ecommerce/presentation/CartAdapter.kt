@@ -7,59 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ecommerce.databinding.ListItemCartBinding
 import com.example.ecommerce.domain.model.CartItem
 
-//import android.view.LayoutInflater
-//import android.view.ViewGroup
-//import androidx.recyclerview.widget.DiffUtil
-//import androidx.recyclerview.widget.ListAdapter
-//import androidx.recyclerview.widget.RecyclerView
-//import com.example.ecommerce.databinding.ListItemCartBinding
-//import com.example.ecommerce.domain.model.CartItem
-//import com.example.ecommerce.domain.usecases.DecrementUseCase
-//import com.example.ecommerce.domain.usecases.IncrementUseCase
-//
-//class CartAdapter(
-//    private val incrementFunction: (CartItem, Int) -> Unit,
-//    private val decrementFunction: (CartItem, Int) -> Unit
-//    ) : ListAdapter<CartItem, CartAdapter.CartItemViewHolder>(DiffCallback) {
-//    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartItemViewHolder {
-//        val layoutInflater = LayoutInflater.from(parent.context)
-//        val binding = ListItemCartBinding.inflate(layoutInflater, parent, false)
-//        return CartItemViewHolder(binding)
-//    }
-//
-//    override fun onBindViewHolder(holder: CartItemViewHolder, position: Int) {
-//        getItem(position)?.let { holder.bind(it, position) }
-//    }
-//
-//    companion object DiffCallback : DiffUtil.ItemCallback<CartItem>() {
-//        override fun areItemsTheSame(oldItem: CartItem, newItem: CartItem): Boolean {
-//            return oldItem.id == newItem.id
-//        }
-//
-//        override fun areContentsTheSame(oldItem: CartItem, newItem: CartItem): Boolean =
-//            (oldItem.name == newItem.name) &&
-//                    (oldItem.price == newItem.price) &&
-//                        (oldItem.quantity == newItem.quantity)
-//    }
-//
-//    inner class CartItemViewHolder(private val binding: ListItemCartBinding) :
-//        RecyclerView.ViewHolder(binding.root) {
-//
-//        fun bind(item: CartItem, position: Int) = with(binding) {
-//            binding.apply {
-//                incrementButton.setOnClickListener {
-//                    incrementFunction(item, position)
-//                }
-//                decrementButton.setOnClickListener {
-//                    decrementFunction(item, position)
-//                }
-//            }
-//            this.viewModel = CartItemUIModel(item)
-//            this.item= item
-//        }
-//    }
-//}
-
 class CartAdapter(
     private val incrementFunction: (CartItem, Int) -> Unit,
     private val decrementFunction: (CartItem, Int) -> Unit
