@@ -42,13 +42,8 @@ class CartActivity : AppCompatActivity() {
     }
 
     private fun bindObservers() {
-        viewModel.items.observe(this) { cartItems ->
-//            adapter.submitList(cartItems)
-            adapter.setCartList(cartItems)
-        }
+        viewModel.items.observe(this) { cartItems -> adapter.setCartList(cartItems) }
 
-        viewModel.totalCart.observe(this) { total ->
-            binding.totalValue.text = total.toString()
-        }
+        viewModel.totalCart.observe(this) { totalOfValue -> binding.totalValue.text = totalOfValue.toString() }
     }
 }
