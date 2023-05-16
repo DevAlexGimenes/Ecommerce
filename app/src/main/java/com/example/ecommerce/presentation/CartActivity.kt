@@ -44,6 +44,6 @@ class CartActivity : AppCompatActivity() {
     private fun bindObservers() {
         viewModel.items.observe(this) { cartItems -> adapter.setCartList(cartItems) }
 
-        viewModel.totalCart.observe(this) { totalOfValue -> binding.totalValue.text = totalOfValue.toString() }
+        viewModel.totalCart.observe(this) { totalOfValueInEcommerce -> binding.totalValue.text = totalOfValueInEcommerce.toString() }
     }
 }
